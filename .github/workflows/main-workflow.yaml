@@ -18,7 +18,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: quickgen-${{ matrix.os }}
-          path: ${{ github.workspace }}/target/release/quickgen
+          path: ${{ github.workspace }}/target/release/quickgen*
           if-no-files-found: error
 
   tag:
