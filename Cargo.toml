@@ -9,4 +9,5 @@ authors = ["Guih Vicenitni"]
 
 [dependencies]
 clap = { version = "4.0", features = ["derive"] }
+rand = "0.8.5"
 uuid = { version = "1.6.1", features = ["v4", "fast-rng", "macro-diagnostics"] }
