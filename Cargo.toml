@@ -2,7 +2,11 @@
 name = "quickgen"
 version = "0.1.0"
 edition = "2021"
+description = "CLI tool to generate random strings based on the chosen generator"
+authors = ["Guih Vicenitni"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+clap = { version = "4.0", features = ["derive"] }
+uuid = { version = "1.6.1", features = ["v4", "fast-rng", "macro-diagnostics"] }
