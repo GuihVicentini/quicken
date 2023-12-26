@@ -33,24 +33,15 @@ fn generate_password(amount: u32) {
 fn generate_random_string() -> String {
     let mut rng = rand::thread_rng();
 
-    // Generate a random letter
     let letter: char = rng.gen_range('a'..='z');
-
-    // Generate a random number
     let number: char = rng.gen_range('0'..='9');
-
-    // Generate a random special character
     let special_char: char = rng.gen_range('!'..='~');
-
-    // Generate the remaining characters
     let remaining_chars: String = (0..10).map(|_| rng.gen_range('!'..='~')).collect();
-
-    // Create a vector with the required characters and shuffle it
     let mut chars: Vec<char> = vec![letter, number, special_char];
+
     chars.extend(remaining_chars.chars());
     chars.shuffle(&mut rng);
 
-    // Convert the vector to a string
     let result: String = chars.into_iter().collect();
     result
 }
